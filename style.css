@@ -1,0 +1,21 @@
+#top_bit{
+    text-shadow: 1px 1px;
+}
+
+p{
+    color:black;
+}
+
+canvas{
+    border-radius: 100px;
+}
+
+.copy_right_footer{
+    position:fixed;
+    color:white;
+    bottom: 0;
+    width:100%;
+    background-color: gray;
+    line-height: 4;
+    text-align: center;
+}

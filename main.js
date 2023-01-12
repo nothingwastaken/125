@@ -11,7 +11,7 @@ sos2 = "";
 
 function preload(){
     m1 = loadSound("週末京都現実逃避.mp3");
-    m2 = loadSound("Kwazii Sonatina.mp3");
+    m2 = loadSound("Kwazii Sonata short.mp3");
 }
 
 function setup(){

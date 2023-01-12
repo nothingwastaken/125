@@ -5,7 +5,9 @@ LWy = 0;
 RWx = 0;
 RWy = 0;
 LWs = 0;
+RWs = 0;
 sos = "";
+sos2 = "";
 
 function preload(){
     m1 = loadSound("週末京都現実逃避.mp3");
@@ -34,6 +36,17 @@ function draw(){
     stroke("#000000");
 
     sos = m1.isPlaying();
+    sos2 = m2.isPlaying();
+
+    if (RWs > 0.02){
+        circle(RWx,RWy, 20);
+        m1.stop();
+        if (sos2 = "false"){
+            m2.play()
+            document.getElementById("song").innerHTML = "Kwazii Sonatina";
+        }
+    }
+
     if (LWs > 0.02){
         circle(LWx,LWy, 20);
         m2.stop();
@@ -48,6 +61,9 @@ function gotPoses(results){
     if (results.length > 0){
         console.log(results);
         LWs = results[0].pose.keypoints[9].score;
+        console.log(LWs);
+        RWs = results[0].pose.keypoints[10].score;
+        console.log(RWs);
 
         LWx = results[0].pose.leftWrist.x;
         LWy = results[0].pose.leftWrist.y;
